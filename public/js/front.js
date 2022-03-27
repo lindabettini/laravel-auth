@@ -1906,23 +1906,7 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-name: "App";
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Laravel\\laravel-auth\\resources\\js\\components\\App.vue: Invalid shorthand property initializer. (27:18)\n\n\u001b[0m \u001b[90m 25 |\u001b[39m     data(){\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[36mreturn\u001b[39m{\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m             title \u001b[33m=\u001b[39m \u001b[32m\"Benvenuti\"\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m }\u001b[33m;\u001b[39m\u001b[0m\n    at instantiate (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Parser.raise (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Parser.checkExpressionErrors (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:4078:12)\n    at Parser.parseMaybeAssign (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12250:12)\n    at Parser.parseExpressionBase (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12143:39\n    at Parser.allowInAnd (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Parser.parseExpression (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12143:17)\n    at Parser.parseReturnStatement (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:14939:28)\n    at Parser.parseStatementContent (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:14582:21)\n    at Parser.parseStatement (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:15167:25)\n    at Parser.parseBlockBody (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:15158:10)\n    at Parser.parseBlock (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:15142:10)\n    at Parser.parseFunctionBody (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:13836:24)\n    at Parser.parseFunctionBodyAndFinish (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:13820:10)\n    at Parser.parseMethod (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:13770:10)\n    at Parser.parseObjectMethod (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:13646:19)\n    at Parser.parseObjPropValue (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:13687:23)\n    at Parser.parsePropertyDefinition (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:13604:10)\n    at Parser.parseObjectLike (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:13494:21)\n    at Parser.parseExprAtom (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12889:23)\n    at Parser.parseExprSubscripts (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Parser.parseUpdate (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Parser.parseMaybeUnary (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Parser.parseMaybeUnaryOrPrivate (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Parser.parseExprOps (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Parser.parseMaybeConditional (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Parser.parseMaybeAssign (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12171:39\n    at Parser.allowInAnd (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Parser.parseMaybeAssignAllowIn (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:12171:17)\n    at Parser.parseExportDefaultExpression (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:15898:22)\n    at Parser.parseExport (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:15786:31)\n    at Parser.parseStatementContent (C:\\Laravel\\laravel-auth\\node_modules\\@babel\\parser\\lib\\index.js:14644:27)");
 
 /***/ }),
 
@@ -37512,25 +37496,32 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c(
+          "div",
+          { staticClass: "card" },
+          [
+            _c("Header", { attrs: { title: _vm.title } }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-header" }, [_vm._v("Benvenuti")]),
+            _vm._v(" "),
+            _vm._m(0),
+          ],
+          1
+        ),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [_vm._v("Benvenuti")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("h2", [_vm._v("Sito in costruzione")]),
-            ]),
-          ]),
-        ]),
-      ]),
+    return _c("div", { staticClass: "card-body" }, [
+      _c("h2", [_vm._v("Sito in costruzione")]),
     ])
   },
 ]
