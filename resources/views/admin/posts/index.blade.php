@@ -1,10 +1,13 @@
 @extends('layouts.app');
 
 @section('content')
-<header>
+<header class="d-flex justify-content-between align-items-center">
   <h1>I miei post</h1>
+  <a href="{{ route('admin.posts.create')}}" class="btn btn-success"><i class="fa-solid fa-plus mr-2"></i>Crea post</a>
 </header>
+<br>
 
+<!-- MESSAGE ALERT  -->
 @if(session('message'))
 <div class="alert alert-{{session('type') ?? 'info' }}">{{session('message')}}</div>
 @endif
