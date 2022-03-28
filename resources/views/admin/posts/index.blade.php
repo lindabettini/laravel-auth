@@ -32,10 +32,12 @@
       <td class="d-flex justify-content-end align-items-start">
         <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary mr-2"><i class="fa-solid fa-eye mr-2"></i>Vedi</a>
 
-        <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST" class="delete-form">
+        <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-warning mr-2"><i class="fa-solid fa-pencil mr-2"></i>Modifica</a>
+
+        <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST" class="delete-form ">
           @method('DELETE')
           @csrf
-          <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash mr-2"></i>Elimina</button>
+          <button type="submit" class="btn btn-danger mr-2"><i class="fa-solid fa-trash mr-2"></i>Elimina</button>
         </form>
       </td>
     </tr>

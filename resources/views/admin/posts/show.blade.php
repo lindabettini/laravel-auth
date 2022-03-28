@@ -11,6 +11,7 @@
 <time>{{ $post->created_at }}</time>
 <hr>
 <div class="d-flex align-items-center justify-content-end">
+  <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-warning mr-2"><i class="fa-solid fa-pencil mr-2"></i>Modifica</a>
   <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST" class="delete-form">
     @method('DELETE')
     @csrf
