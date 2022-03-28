@@ -27,7 +27,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        $post = new Post();
+        return view('admin.posts.create', compact('post'));
     }
 
     /**
@@ -58,7 +59,7 @@ class PostController extends Controller
         // $post->slug = Str::slug($post->title, '-'); e poi levo slug dalla $fillable di Model Post
         $post->save();
 
-        return redirect('admin.posts.index')->with('message', "Post creato con successo")->with('type', 'success');
+        return redirect()->route('admin.posts.index')->with('message', "Post creato con successo")->with('type', 'success');
     }
 
     /**
@@ -90,9 +91,25 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|unique:posts|min:5|max:50',
+            'content' => 'required|string',
+            'image' => 'url'
+        ], [
+            'title.required' => 'Il titolo è obbligatorio.',
+            'title.min' => 'La lunghezza minima del titolo è di 5 caratteri.',
+            'title.max' => 'La lunghezza massima del titolo è di 50 caratteri.',
+            'title.unique' => "Esiste gia' un post dal titolo ''$request->title''.",
+            'content.required' => 'Scrivi qualcosa nel post.',
+            'image.url' => 'Url immagine non valido.'
+        ]);
+
+        $data = $request->all();
+        $data['slug'] = Str::slug($request->title, '-');
+        $post->update($data);
+        return redirect()->route('admin.posts.show', $post->id);
     }
 
     /**
