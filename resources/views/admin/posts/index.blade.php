@@ -4,6 +4,10 @@
 <header>
   <h1>I miei post</h1>
 </header>
+
+@if(session('message'))
+<div class="alert alert-{{session('type') ?? 'info' }}">{{session('message')}}</div>
+@endif
 <table class="table table-dark">
   <thead>
     <tr>
@@ -23,7 +27,13 @@
       <td>{{ $post->slug }}</td>
       <td>{{$post->created_at}}</td>
       <td class="d-flex justify-content-end align-items-center">
-        <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye mr-2"></i>Vedi</a>
+        <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary mr-2"><i class="fa-solid fa-eye mr-2"></i>Vedi</a>
+
+        <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST" class="delete-form">
+          @method('DELETE')
+          @csrf
+          <button type="submit" class="btn btn-danger">Elimina</button>
+        </form>
       </td>
     </tr>
     @empty
@@ -35,4 +45,8 @@
     @endforelse
   </tbody>
 </table>
+@endsection
+
+@section('scripts')
+<script src="{{asset('js/delete-confirm.js')}}" defer></script>
 @endsection

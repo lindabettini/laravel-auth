@@ -11,7 +11,7 @@
 <time>{{ $post->created_at }}</time>
 <hr>
 <div class="d-flex align-items-center justify-content-end">
-  <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST" id="delete-form">
+  <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST" class="delete-form">
     @method('DELETE')
     @csrf
     <button type="submit" class="btn btn-danger">Elimina</button>
@@ -24,12 +24,5 @@
 @endsection
 
 @section('scripts')
-<script>
-  const deleteForm = document.getElementById('delete-form');
-  deleteForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const confirmation = confirm('Sei sicuro di voler eliminare questo post?');
-    if (confirmation) e.target.submit();
-  });
-</script>
+<script src="{{asset('js/delete-confirm.js')}}" defer></script>
 @endsection
